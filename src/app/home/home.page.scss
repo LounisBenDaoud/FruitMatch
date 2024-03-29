@@ -1,11 +1,6 @@
 #container {
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  margin-top: 50px;
 }
 
 #container strong {
@@ -14,10 +9,10 @@
 }
 
 #container p {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 22px;
 
-  color: #8c8c8c;
+  color: black;
 
   margin: 0;
 }
@@ -25,3 +20,4 @@
 #container a {
   text-decoration: none;
 }
+
