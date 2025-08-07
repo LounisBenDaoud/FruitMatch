@@ -42,7 +42,7 @@ export class Level1Page implements OnInit {
 
   public debugText = 'Debug text goes here :)';
 
-  constructor() {}
+  constructor() { }
 
   ngOnInit() {
     this.restartGame();
@@ -185,13 +185,16 @@ export class Level1Page implements OnInit {
 
   // Win Condition
   winCon() {
-    var winCheck = false;
-    // If at least 1 or more cards have not been solved,
-    // then the user hasn't solved the game
-    for (var i = 0; i <= this.cardsArray.length; i++) {
-      if (this.cardsArray[i].val != -1) winCheck = true;
-      // If winCheck is false, player has won the game
-      if (winCheck == false) this.gameState = 'win';
+    let allSolved = true;
+    // Check if all cards are solved
+    for (let i = 0; i < this.cardsArray.length; i++) {
+      if (this.cardsArray[i].val != -1) {
+        allSolved = false;
+        break;
+      }
+    }
+    if (allSolved) {
+      this.gameState = 'win';
     }
   }
 

@@ -1,0 +1,86 @@
+body,
+.level2-page {
+    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: floatCard 2s infinite ease-in-out alternate;
+}
+
+@keyframes floatCard {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+.card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.37);
+}
+
+h2,
+.title {
+    color: #ff5858;
+    text-shadow: 2px 2px 12px #fff2cc;
+    font-weight: 900;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+}
+
+ion-button {
+    background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+    color: #fff;
+    border-radius: 32px;
+    box-shadow: 0 4px 16px rgba(67, 233, 123, 0.25);
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 0.8rem 2.2rem;
+    margin: 1rem 0;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+ion-button:hover {
+    background: linear-gradient(90deg, #38f9d7 0%, #43e97b 100%);
+    box-shadow: 0 8px 32px rgba(67, 233, 123, 0.35);
+}
+
+.win-screen {
+    background: linear-gradient(135deg, #f857a6 0%, #ff5858 100%);
+    border-radius: 32px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 32px rgba(248, 87, 166, 0.25);
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    animation: popWin 1s ease;
+}
+
+@keyframes popWin {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
